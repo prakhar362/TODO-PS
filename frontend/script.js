@@ -4,7 +4,7 @@ const closePopup = document.getElementById('closePopup');
 let selectedSection;
 let currentTaskCard = null;
 let currentTaskId = null; // Track whether we're adding a new task or editing an existing one
-const BACKEND_URL = 'https://task-management-4d13.onrender.com'; // Your backend URL
+const BACKEND_URL = 'https://taskify-todoweb.onrender.com'; // Your backend URL
 let authToken = localStorage.getItem('token'); // Retrieve JWT token from local storage
 
 // Fetch all tasks from the server when the page loads
