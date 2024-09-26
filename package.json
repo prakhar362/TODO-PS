@@ -1,0 +1,19 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "Create a Task Management Application with drag-drop functionality between the category.\r UI: https://utfs.io/f/c63f4dc5-6833-4c65-9b07-e1421d833ee2-ng18dw.png",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-destroy": "^3.5.7"
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="login">Login</button>
+    <button id="signup">Sign Up</button>
+
+    <script>
+        const BACKEND_URL = 'http://localhost:3000';
+
+        
+        // Handle navigation to login
+        document.getElementById('login').addEventListener('click', () => {
+            window.location.href = `${BACKEND_URL}/login`;
+        });
+
+        // Handle navigation to signup
+        document.getElementById('signup').addEventListener('click', () => {
+            window.location.href = `${BACKEND_URL}/signup`;
+        });
+    </script>
+</body>
+</html>
