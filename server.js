@@ -130,13 +130,13 @@ app.get('/tasks', authenticateToken,(req, res) => {
 });
 
 // Route to fetch all tasks
-app.get('/api/tasks', authenticateToken, (req, res) => {
+app.get('/tasks', authenticateToken, (req, res) => {
   const tasks = getTasks();
   res.json(tasks); // Send all tasks as a response
 });
 
 // Route to add a new task
-app.post('/api/tasks', authenticateToken, (req, res) => {
+app.post('/tasks', authenticateToken, (req, res) => {
   const tasks = getTasks();
   const newTask = req.body;
   newTask.id = tasks.length; // Assign a unique ID
@@ -146,7 +146,7 @@ app.post('/api/tasks', authenticateToken, (req, res) => {
 });
 
 // Route to update a task
-app.put('/api/tasks/:id', authenticateToken, (req, res) => {
+app.put('/tasks/:id', authenticateToken, (req, res) => {
   const tasks = getTasks();
   const taskId = parseInt(req.params.id, 10);
   const updatedTask = req.body;
@@ -162,7 +162,7 @@ app.put('/api/tasks/:id', authenticateToken, (req, res) => {
 });
 
 // Route to delete a task
-app.delete('/api/tasks/:id', authenticateToken, (req, res) => {
+app.delete('/tasks/:id', authenticateToken, (req, res) => {
   const tasks = getTasks();
   const taskId = parseInt(req.params.id, 10);
 
