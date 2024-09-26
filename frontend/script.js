@@ -198,7 +198,7 @@ function resetFormFields() {
 
 document.getElementById('logout').addEventListener('click', async () => {
     try {
-        const response = await fetch('http://localhost:3000/logout', {
+        const response = await fetch('https://taskify-todoweb.onrender.com/logout', {
             method: 'POST',
             credentials: 'include' // Include cookies with the request
         });
