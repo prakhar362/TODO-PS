@@ -3,17 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Taskify - Todo Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://cdn3.vectorstock.com/i/1000x1000/31/77/task-management-concept-vector-24073177.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent for glassmorphism */
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px); /* Glass effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: rgb(109, 11, 42);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-group {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            margin: 15px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #login {
+            background-color: #007bff; /* Blue color */
+        }
+
+        #login:hover {
+            background-color: #0056b3;
+        }
+
+        #signup {
+            background-color: #28a745; /* Green color */
+        }
+
+        #signup:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding: 30px;
+            }
+
+            button {
+                padding: 12px 24px;
+                margin: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello</h1>
-    <button id="login">Login</button>
-    <button id="signup">Sign Up</button>
+    <div class="container">
+        <h1><strong>Welcome to Taskify</strong></h1>
+        <div class="btn-group">
+            <button id="login">Login</button>
+            <button id="signup">Sign Up</button>
+        </div>
+    </div>
 
     <script>
         const BACKEND_URL = 'https://taskify-todoweb.onrender.com';
 
-        
         // Handle navigation to login
         document.getElementById('login').addEventListener('click', () => {
             window.location.href = `${BACKEND_URL}/login`;
